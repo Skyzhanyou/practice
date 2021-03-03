@@ -1,0 +1,86 @@
+.main {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    /* height: 100%;
+    width: 100%; */
+    padding: 1%;
+    margin: 0;
+    background: linear-gradient(#000d5b, #0020d3);
+    overflow: hidden;
+}
+
+.base {
+    background-color: #ffffff19;
+    padding: 2em;
+    margin: 5px;
+    border-radius: 1em;
+}
+
+.base-op {
+    padding: 1em;
+    margin: 5px;
+}
+
+.col1 {
+    float: left;
+    width: 10%;
+    /* overflow: hidden; */
+}
+
+.col2 {
+    float: left;
+    width: 20%;
+    /* overflow: hidden; */
+}
+
+.col3 {
+    float: left;
+    width: 30%;
+    /* overflow: hidden; */
+}
+
+.col4 {
+    float: left;
+    width: 29.4%;
+    /* overflow: hidden; */
+}
+
+.col5 {
+    float: left;
+    width: 55%;
+    /* overflow: hidden; */
+}
+
+.col6 {
+    float: left;
+    width: 66%;
+    /* overflow: hidden; */
+}
+
+.col-inside {
+    float: left;
+    width: 90%;
+}
+
+.heig1 {
+    height: 26%;
+}
+
+.heig2 {
+    height: 43%;
+}
+
+.heig3 {
+    height: 60%;
+}
+
+.heig4 {
+    height: 93%;
+}
+
+.heig-inside {
+    height: 84%;
+}

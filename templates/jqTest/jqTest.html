@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery</title>
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<style>
+    .hello {
+        background: #98bf21;
+        height: 100px;
+        width: 200px;
+        position: relative;
+    }
+
+    #panel,
+    #flip {
+        padding: 5px;
+        text-align: center;
+        background-color: #e5eecc;
+        border: solid 1px #c3c3c3;
+    }
+
+    #panel {
+        padding: 50px;
+        display: none;
+    }
+
+    #ajax-test {
+        width: 20em;
+    }
+
+    #jsonp {
+        width: 20em;
+        height: 10em;
+    }
+
+    #cors {
+        width: 20em;
+        height: 10em;
+    }
+</style>
+
+<body>
+    <p>如果你点击“隐藏” 按钮，我将会消失。</p>
+    <span>淡入淡出</span>
+    <button id="fade-toggle">隐藏/显示</button>
+    <button id="fade-hide">隐藏</button>
+    <button id="fade-show">显示</button><br>
+    <span>滑入滑出</span>
+    <button id="slide-toggle">隐藏/显示</button>
+    <button id="slide-hide">隐藏</button>
+    <button id="slide-show">显示</button><br>
+
+    <div class="hello">
+        hello
+    </div>
+
+    <button id="stop">停止滑动</button>
+    <div id="flip">点我向下滑动面板</div>
+    <div id="panel">Hello world!</div>
+
+    <div id="test-jquery">
+        <p id="para-1" class="color-red">JavaScript</p>
+        <p id="para-2" class="color-green">Haskell</p>
+        <p class="color-red color-green">Erlang</p>
+        <p name="name" class="color-black">Python</p>
+        <form class="test-form" target="_blank" action="#0" onsubmit="return false;">
+            <legend>注册新用户</legend>
+            <fieldset>
+                <p><label>名字: <input name="name"></label></p>
+                <p><label>邮件: <input name="email"></label></p>
+                <p><label>口令: <input name="password" type="password"></label></p>
+                <p><button type="submit">注册</button></p>
+            </fieldset>
+        </form>
+    </div>
+
+    <ul class="lang">
+        <li class="js dy">JavaScript</li>
+        <li class="dy">Python</li>
+        <li id="swift">Swift</li>
+        <li class="dy">Scheme</li>
+        <li name="haskell">Haskell</li>
+    </ul>
+
+    <form id="test-form" action="#0" onsubmit="return false;">
+        <p><label>Name: <input name="name"></label></p>
+        <p><label>Email: <input name="email"></label></p>
+        <p><label>Password: <input name="password" type="password"></label></p>
+        <p>Gender: <label><input name="gender" type="radio" value="m" checked> Male</label> <label><input name="gender"
+                    type="radio" value="f"> Female</label></p>
+        <p><label>City: <select name="city">
+                    <option value="BJ" selected>Beijing</option>
+                    <option value="SH">Shanghai</option>
+                    <option value="CD">Chengdu</option>
+                    <option value="XM">Xiamen</option>
+                </select></label></p>
+        <p><button type="submit">Submit</button></p>
+    </form>
+
+    <ul id="test-ul">
+        <li class="js">JavaScript</li>
+        <li name="book">Java &amp; JavaScript</li>
+        <li id="delete">啥也没有</li>
+    </ul>
+
+    <div id="test-img">
+        <img class="test-img" src="https://img.alicdn.com/bao/uploaded/i8/TB1VHeRRFXXXXXyXVXXAMy_9VXX_050209.jpg">
+        <button id="fade">淡入淡出</button>
+        <button id="slide">滑入滑出</button>
+    </div>
+
+    <div id="test-div">
+        <ul>
+            <li><span>JavaScript</span></li>
+            <li><span>Python</span></li>
+            <li><span>Swift</span></li>
+        </ul>
+        <button id="run">run</button>
+    </div>
+
+    <input type="text" id="ajax-test">
+    <button class="ajax-test">ajax请求</button><br>
+
+    <textarea id="jsonp"></textarea>
+    <button class="jsonp">jsonp测试</button><br>
+
+    <textarea id="cors"></textarea>
+    <button class="cors">cors测试</button>
+</body>
+<script src="{{ url_for('static', filename='js/week3/jqTest.js') }}"></script>
+<script>
+    console.log('jQuery版本：' + $.fn.jquery);
+</script>
+
+</html>

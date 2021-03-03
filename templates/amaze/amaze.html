@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>amaze</title>
+    <link rel="icon" type="image" href="http://amazeui.clouddeep.cn/assets/i/favicon.png">
+
+    <!-- jQuery -->
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- amaze css -->
+    <link href="http://cdn.clouddeep.cn/amazeui/1.0.1/css/amazeui.css" rel="stylesheet">
+
+    <!-- vue -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
+</head>
+
+<body>
+    <div class="am-alert" data-am-alert data-am-sticky>
+        <button type="button" class="am-close">&times;</button>
+        <p>没什么可给你，但求凭这阙歌。谢谢你风雨里，都不退愿陪着我。</p>
+    </div>
+    <div class="am-alert am-alert-success" data-am-alert>
+        <button type="button" class="am-close">&times;</button>
+        <p>没什么可给你，但求凭这阙歌。谢谢你风雨里，都不退愿陪着我。</p>
+    </div>
+    <div class="am-alert am-alert-warning" data-am-alert>
+        <button type="button" class="am-close">&times;</button>
+        <p>没什么可给你，但求凭这阙歌。谢谢你风雨里，都不退愿陪着我。</p>
+    </div>
+    <div class="am-alert am-alert-danger" data-am-alert>
+        <button type="button" class="am-close">&times;</button>
+        <p>没什么可给你，但求凭这阙歌。谢谢你风雨里，都不退愿陪着我。</p>
+    </div>
+    <div class="am-alert am-alert-secondary" data-am-alert>
+        <button type="button" class="am-close">&times;</button>
+        <p>没什么可给你，但求凭这阙歌。谢谢你风雨里，都不退愿陪着我。</p>
+    </div>
+    <div class="am-alert" data-am-alert>
+        <button type="button" class="am-close">&times;</button>
+        <h3>共同渡过</h3>
+        <p>《共同渡过》是张国荣1987年发行的专辑《Summer Romance》中的一首歌。</p>
+        <ul>
+            <li>若我可再活多一次都盼</li>
+            <li>再可以在路途重逢着你</li>
+            <li>共去写一生的句子</li>
+            <li>若我可再活多一次千次</li>
+            <li>我都盼面前仍是你</li>
+            <li>我要他生都有今生的暖意</li>
+        </ul>
+    </div>
+    <button type="button" class="am-btn am-btn-primary btn-loading-example"
+        data-am-loading="{spinner: 'circle-o-notch', loadingText: '加载中...', resetText: '加载过了'}">按钮 - button 元素</button>
+
+    <input type="button" class="am-btn am-btn-secondary btn-loading-example" value="按钮 - input 元素"
+        data-am-loading="{loadingText: '努力加载中...'}" />
+    <button type="button" class="am-btn am-btn-primary" data-am-button>切换状态</button>
+
+    <div class="am-btn-group" data-am-button>
+        <label class="am-btn am-btn-primary">
+            <input type="checkbox"> 选项 1
+        </label>
+        <label class="am-btn am-btn-primary">
+            <input type="checkbox"> 选项 2
+        </label>
+        <label class="am-btn am-btn-primary">
+            <input type="checkbox"> 选项 3
+        </label>
+    </div>
+    <div class="am-btn-group" data-am-button>
+        <label class="am-btn am-btn-primary">
+            <input type="radio" name="options" id="option1"> 选项 1
+        </label>
+        <label class="am-btn am-btn-primary">
+            <input type="radio" name="options" id="option2"> 选项 2
+        </label>
+        <label class="am-btn am-btn-primary">
+            <input type="radio" name="options" id="option3"> 选项 3
+        </label>
+    </div>
+    <div class="am-panel-group" id="accordion">
+        <div class="am-panel am-panel-default">
+            <div class="am-panel-hd">
+                <h4 class="am-panel-title" data-am-collapse="{parent: '#accordion', target: '#do-not-say-1'}">
+                    莫言 - 你不懂我，我不怪你 #1
+                </h4>
+            </div>
+            <div id="do-not-say-1" class="am-panel-collapse am-collapse am-in">
+                <div class="am-panel-bd">
+                    每个人都有一个死角， 自己走不出来，别人也闯不进去。
+                    我把最深沉的秘密放在那里。
+                    你不懂我，我不怪你。
+
+                    每个人都有一道伤口， 或深或浅，盖上布，以为不存在。
+                    我把最殷红的鲜血涂在那里。
+                    你不懂我，我不怪你。
+                </div>
+            </div>
+        </div>
+        <div class="am-panel am-panel-default">
+            <div class="am-panel-hd">
+                <h4 class="am-panel-title" data-am-collapse="{parent: '#accordion', target: '#do-not-say-2'}">
+                    莫言 - 你不懂我，我不怪你 #2
+                </h4>
+            </div>
+            <div id="do-not-say-2" class="am-panel-collapse am-collapse am-in">
+                <div class="am-panel-bd">
+                    每个人都有一个死角， 自己走不出来，别人也闯不进去。
+                    我把最深沉的秘密放在那里。
+                    你不懂我，我不怪你。
+
+                    每个人都有一道伤口， 或深或浅，盖上布，以为不存在。
+                    我把最殷红的鲜血涂在那里。
+                    你不懂我，我不怪你。
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="am-btn am-btn-primary" data-am-collapse="{target: '#collapse-nav'}">Menu <i
+            class="am-icon-bars"></i></button>
+    <nav>
+        <ul id="collapse-nav" class="am-nav am-collapse">
+            <li><a href="">开始使用</a></li>
+            <li><a href="">CSS 介绍</a></li>
+            <li class="am-active"><a href="">JS 介绍</a></li>
+            <li><a href="">功能定制</a></li>
+        </ul>
+    </nav>
+    <div class="am-dropdown" data-am-dropdown>
+        <button class="am-btn am-btn-primary am-dropdown-toggle" data-am-dropdown-toggle>下拉列表 <span
+                class="am-icon-caret-down"></span></button>
+        <ul class="am-dropdown-content">
+            <li class="am-dropdown-header">标题</li>
+            <li><a href="#">快乐的方式不只一种</a></li>
+            <li class="am-active"><a href="#">最荣幸是</a></li>
+            <li><a href="#">谁都是造物者的光荣</a></li>
+            <li class="am-disabled"><a href="#">就站在光明的角落</a></li>
+            <li class="am-divider"></li>
+            <li><a href="#">天空海阔 要做最坚强的泡沫</a></li>
+        </ul>
+    </div>
+    <div class="am-dropdown am-dropdown-up" data-am-dropdown>
+        <button class="am-btn am-btn-danger am-dropdown-toggle" data-am-dropdown-toggle>上拉列表 <span
+                class="am-icon-caret-up"></span></button>
+        <ul class="am-dropdown-content">
+            <li class="am-dropdown-header">标题</li>
+            <li><a href="#">快乐的方式不只一种</a></li>
+            <li class="am-active"><a href="#">最荣幸是</a></li>
+            <li><a href="#">谁都是造物者的光荣</a></li>
+            <li class="am-disabled"><a href="#">就站在光明的角落</a></li>
+            <li class="am-divider"></li>
+            <li><a href="#">天空海阔 要做最坚强的泡沫</a></li>
+        </ul>
+    </div>
+    <div class="am-dropdown" data-am-dropdown>
+        <button class="am-btn am-btn-success am-dropdown-toggle">Dropdown <span
+                class="am-icon-caret-down"></span></button>
+        <div class="am-dropdown-content">
+            <h2>I am what I am</h2>
+            <p>
+                多么高兴 在琉璃屋中快乐生活
+                对世界说 甚么是光明和磊落
+                我就是我 是颜色不一样的烟火
+            </p>
+        </div>
+    </div>
+    <div id="doc-dropdown-justify">
+        <div class="am-dropdown" data-am-dropdown="{justify: '#doc-dropdown-justify'}">
+            <button class="am-btn am-btn-success am-dropdown-toggle">宽度适应下拉 <span
+                    class="am-icon-caret-down"></span></button>
+            <div class="am-dropdown-content">
+                <h2>I am what I am</h2>
+                <p>
+                    多么高兴 在琉璃屋中快乐生活
+                    对世界说 甚么是光明和磊落
+                    我就是我 是颜色不一样的烟火
+                </p>
+            </div>
+        </div>
+    </div>
+    <button class="am-btn am-btn-primary" data-am-modal="{target: '#doc-modal-1'}">Modal</button>
+
+    <div class="am-modal am-modal-no-btn" tabindex="-1" id="doc-modal-1">
+        <div class="am-modal-dialog">
+            <div class="am-modal-hd">Modal 标题
+                <a href="javascript: void(0)" class="am-close am-close-spin" data-am-modal-close>&times;</a>
+            </div>
+            <div class="am-modal-bd">
+                Modal 内容。
+            </div>
+        </div>
+    </div>
+    <button class="am-btn am-btn-primary" data-am-modal="{target: '#my-alert'}">Alert</button>
+
+    <div class="am-modal am-modal-alert" tabindex="-1" id="my-alert">
+        <div class="am-modal-dialog">
+            <div class="am-modal-hd">Amaze UI</div>
+            <div class="am-modal-bd">
+                Hello world！
+            </div>
+            <div class="am-modal-footer">
+                <span class="am-modal-btn">确定</span>
+            </div>
+        </div>
+    </div>
+    <button class="am-btn am-btn-warning" id="doc-confirm-toggle">Confirm</button>
+
+    <div class="am-modal am-modal-confirm" tabindex="-1" id="my-confirm">
+        <div class="am-modal-dialog">
+            <div class="am-modal-hd">Amaze UI</div>
+            <div class="am-modal-bd">
+                你是猴子派来的逗比吗?
+            </div>
+            <div class="am-modal-footer">
+                <span class="am-modal-btn" data-am-modal-cancel>取消</span>
+                <span class="am-modal-btn" data-am-modal-confirm>确定</span>
+            </div>
+        </div>
+    </div>
+    <button class="am-btn am-btn-success" id="doc-prompt-toggle">Prompt</button>
+
+    <div class="am-modal am-modal-prompt" tabindex="-1" id="my-prompt">
+        <div class="am-modal-dialog">
+            <div class="am-modal-hd">Amaze UI</div>
+            <div class="am-modal-bd">
+                来来来，吐槽点啥吧
+                <input type="text" class="am-modal-prompt-input">
+            </div>
+            <div class="am-modal-footer">
+                <span class="am-modal-btn" data-am-modal-cancel>取消</span>
+                <span class="am-modal-btn" data-am-modal-confirm>提交</span>
+            </div>
+        </div>
+    </div>
+    <button class="am-btn am-btn-success" data-am-modal="{target: '#my-modal-loading'}">Modal Loading</button>
+
+    <div class="am-modal am-modal-loading am-modal-no-btn" tabindex="-1" id="my-modal-loading">
+        <div class="am-modal-dialog">
+            <div class="am-modal-hd">正在载入...</div>
+            <div class="am-modal-bd">
+                <span class="am-icon-spinner am-icon-spin"></span>
+            </div>
+        </div>
+    </div>
+    <button class="am-btn am-btn-secondary" data-am-modal="{target: '#my-actions'}">Actions</button>
+
+    <div class="am-modal-actions" id="my-actions">
+        <div class="am-modal-actions-group">
+            <ul class="am-list">
+                <li class="am-modal-actions-header">你想整哪样？你想整哪样？你想整哪样？你想整哪样？你想整哪样？你想整哪样？你想整哪样？</li>
+                <li><a href="#"><span class="am-icon-wechat"></span> ...</a></li>
+                <li class="am-modal-actions-danger">
+                    <a href="#"><i class="am-icon-twitter"></i> ...</a>
+                </li>
+            </ul>
+        </div>
+        <div class="am-modal-actions-group">
+            <button class="am-btn am-btn-secondary am-btn-block" data-am-modal-close>取消</button>
+        </div>
+    </div>
+    <button class="am-btn am-btn-danger" data-am-modal="{target: '#my-popup'}">Popup</button>
+
+    <div class="am-popup" id="my-popup">
+        <div class="am-popup-inner">
+            <div class="am-popup-hd">
+                <h4 class="am-popup-title">标题 - 女爵</h4>
+                <span data-am-modal-close class="am-close">&times;</span>
+            </div>
+            <div class="am-popup-bd">
+                为你封了国境
+            </div>
+        </div>
+    </div>
+    <button class="am-btn am-btn-primary" data-am-popover="{content: '鄙是点击显示的 Popover'}">点击显示 Popover</button>
+    <button class="am-btn am-btn-success" data-am-popover="{content: '鄙是点击 Hover 显示的 Popover', trigger: 'hover focus'}">
+        Hover 显示 Popover
+    </button>
+    <button id="np-s" class="am-btn am-btn-primary">$.AMUI.progress.start();</button>
+    <button id="np-d" class="am-btn am-btn-success">$.AMUI.progress.done();</button>
+    <span id='test' class="am-badge am-badge-success">进度:</span>
+    <div style="width: 60%; height: 40%; margin: 0 auto;">
+        <div class="am-slider am-slider-default">
+            <ul class="am-slides">
+                <li>
+                    <img src="http://cn.bing.com/az/hprichv/LondonTrainStation_GettyRR_139321755_ZH-CN742316019.jpg">
+                </li>
+                <li>
+                    <img src="http://s.cn.bing.net/az/hprichbg/rb/CardinalsBerries_ZH-CN10679090179_1366x768.jpg">
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- 按钮触发器， 需要指定 target -->
+    <button class="am-btn am-btn-primary" data-am-offcanvas="{target: '#doc-oc-demo2'}">点击显示侧边栏</button>
+
+    <!-- 侧边栏内容 -->
+    <div id="doc-oc-demo2" class="am-offcanvas">
+        <div class="am-offcanvas-bar am-offcanvas-bar-flip">
+            <div class="am-offcanvas-content">
+                <p>
+                    我不愿让你一个人 <br />
+                    承受这世界的残忍 <br />
+                    我不愿眼泪陪你到 永恒
+                </p>
+            </div>
+        </div>
+    </div>
+    <nav class="scrollspy-nav" data-am-scrollspy-nav data-am-sticky>
+        <ul>
+            <li><a href="#about">关于棉花糖</a></li>
+            <li><a href="#team">成员介绍</a></li>
+            <li><a href="#ep">首张 EP</a></li>
+            <li><a href="#second">再见王子</a></li>
+            <li><a href="#third">第三张</a></li>
+        </ul>
+    </nav>
+    <button data-am-smooth-scroll class="am-btn am-btn-success">滚动到顶部</button>
+    <div class="am-tabs" data-am-tabs>
+        <ul class="am-tabs-nav am-nav am-nav-tabs">
+            <li class="am-active"><a href="#tab1">恣意</a></li>
+            <li><a href="#tab2">等候</a></li>
+            <li><a href="#tab3">流浪</a></li>
+        </ul>
+
+        <div class="am-tabs-bd">
+            <div class="am-tab-panel am-fade am-in am-active" id="tab1">
+                置身人群中<br>你只需要被淹没 享受 沉默<br>退到人群后<br>你只需给予双手 微笑 等候
+            </div>
+            <div class="am-tab-panel am-fade" id="tab2">
+                走在忠孝东路<br>徘徊在茫然中<br>在我的人生旅途<br>选择了多少错误<br>我在睡梦中惊醒<br>感叹悔言无尽<br>恨我不能说服自己<br>接受一切教训<br>让生命去等候<br>等候下一个漂流<br>让生命去等候<br>等候下一个伤口
+            </div>
+            <div class="am-tab-panel am-fade" id="tab3">
+                我就这样告别山下的家，我实在不愿轻易让眼泪留下。我以为我并不差不会害怕，我就这样自己照顾自己长大。我不想因为现实把头低下，我以为我并不差能学会虚假。怎样才能够看穿面具里的谎话？别让我的真心散的像沙。如果有一天我变得更复杂，还能不能唱出歌声里的那幅画？
+            </div>
+        </div>
+    </div>
+</body>
+
+<!-- amaze js -->
+<script src="https://cdn.bootcss.com/amazeui/2.7.2/js/amazeui.js"></script>
+
+<script src="amaze.js"></script>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>数据仪表盘</title>
+    <link rel="icon" type="image/x-icon" href="https://www.echartsjs.com/images/favicon.png" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/week3/dashboard.css') }}">
+    <!-- jQuery -->
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <!-- echarts -->
+    <script src="https://cdn.bootcss.com/echarts/4.2.1-rc1/echarts.min.js"></script>
+    <!-- bmap -->
+    <script src="{{ url_for('static', filename='js/bmap.js') }}"></script>
+    <!-- echarts-gl -->
+    <script src="{{ url_for('static', filename='js/echarts-gl.js') }}"></script>
+</head>
+
+<body>
+    <div class="main">
+        <div class="col4 heig4 base-op">
+            <div id="line" class="col-inside heig2 base"></div>
+            <div id="bar" class="col-inside heig2 base"></div>
+        </div>
+        <div class="col6 heig4 base-op">
+            <div id="globe" class="col-inside heig3 base"></div>
+            <div id="pie" class="col4 heig1 base"></div>
+            <div id="parallel" class="col5 heig1 base"></div>
+        </div>
+    </div>
+</body>
+
+<!-- 地球 -->
+<script>
+    var earth = "{{ url_for('static', filename='images/world.topo.bathy.200401.jpg') }}";
+    var star = "{{ url_for('static', filename='images/starfield.jpg') }}";
+</script>
+<!-- 仪表盘js -->
+<script src="{{ url_for('static', filename='js/week3/dashboard.js') }}"></script>
+
+</html>

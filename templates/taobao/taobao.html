@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>淘宝网</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/week1_2/taobao.css') }}">
+    <link rel="icon" type="image/x-icon" href="https://img.alicdn.com/tps/i3/T1OjaVFl4dXXa.JOZB-114-114.png" />
+</head>
+
+<body>
+    <!-- 淘宝导航栏 -->
+    <header>
+        <div class="width">
+            <!-- 导航栏左侧 -->
+            <div style="float: left">
+                <a href="#">淘宝网</a>
+                <p class="p-header">欢迎来到淘宝</p>
+                <a href="#">请登录</a>
+                <a href="#">免费注册</a>
+            </div>
+            <!-- 导航栏右侧 -->
+            <div style="float: right">
+                <!-- 下拉框 -->
+                <div class="dropdown">
+                    <a class="dropbtn" href="#">我的淘宝</a>
+                    <div class="dropdown-content">
+                        <a href="#">已买到的宝贝</a>
+                        <a href="#">已卖出的宝贝</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a class="dropbtn" href="#">购物车</a>
+                    <div class="dropdown-content">
+                        <a href="#"></a>
+                        <a href="#"></a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a class="dropbtn" href="#">收藏夹</a>
+                    <div class="dropdown-content">
+                        <a href="#">收藏的宝贝</a>
+                        <a href="#">收藏的店铺</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="top-wrap width">
+        <!-- logo -->
+        <a href="#">
+            <img style="float: left;" border="0" src="https://img.alicdn.com/tfs/TB1_uT8a5ERMeJjSspiXXbZLFXa-143-59.png"
+                alt="Pulpit rock" width="142" height="58">
+        </a>
+        <!-- 搜索框 -->
+        <div class="search-wrap">
+            <div class="choose-wrap">
+                <div class="choose">
+                    <ul>
+                        <!-- <li>宝贝</li>
+                        <li>店铺</li> -->
+                    </ul>
+                </div>
+            </div>
+            <div class="input">
+                <input type="text">
+            </div>
+            <button class="submit">搜索</button>
+        </div>
+    </div>
+    <div class="main width">
+        <!-- 商品导航栏 -->
+        <div class="tap">
+            <ul>
+                <li><a class="bar active" style="color: rgb(255, 255, 255)" href="#">所有宝贝</a></li>
+                <li><a class="bar" href="#">天猫</a></li>
+                <li><a class="bar" href="#">二手</a></li>
+            </ul>
+        </div>
+
+        <h4 style="margin: 0 8px;padding: 10px;">所有分类></h4>
+        <!-- 商品选择器 -->
+        <div class="selector">
+            <div class="row">
+                <h4 style="float: left">适用场景:</h4>
+                <div style="padding: 0 100px 0 112px">
+                    <a>商务办公</a>
+                    <a>轻薄便携</a>
+                    <a>家庭娱乐</a>
+                    <a>移动工作站</a>
+                </div>
+            </div>
+            <div class="row">
+                <h4 style="float: left">尺寸</h4>
+                <div style="padding: 0 100px 0 112px">
+                    <a>11寸</a>
+                    <a>11.6寸</a>
+                    <a>12寸</a>
+                    <a>13寸</a>
+                    <a>14寸</a>
+                    <a>15寸</a>
+                    <a>16寸</a>
+                    <a>17寸</a>
+                </div>
+            </div>
+            <div class="row">
+                <h4 style="float: left">显卡类型</h4>
+                <div style="padding: 0 100px 0 112px">
+                    <a>核心显卡</a>
+                    <a>集成显卡</a>
+                    <a>独立显卡</a>
+                    <a>RTX2080</a>
+                    <a>RTX2070</a>
+                    <a>RTX2060</a>
+                    <a>RTX2080TI</a>
+                </div>
+            </div>
+            <div class="row">
+                <h4 style="float: left">硬盘容量</h4>
+                <div style="padding: 0 0px 0 112px">
+                    <a>128G</a>
+                    <a>256G</a>
+                    <a>518G</a>
+                    <a>1T</a>
+                    <a>128G SSD & 1T HDD</a>
+                    <a>256G SSD & 1T HDD</a>
+                    <a>128G SSD & 1.5T HDD</a>
+                </div>
+            </div>
+            <div class="row">
+                <h4 style="float: left">筛选条件</h4>
+                <div style="padding: 0 100px 0 112px">
+                    <a>商务办公</a>
+                    <a>轻薄便携</a>
+                    <a>家庭娱乐</a>
+                    <a>移动工作站</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 商品 -->
+    <div class="goods-width">
+        <div class="goods-list">
+            <div class="goods">
+                <a href="#">
+                    <img border="0"
+                        src="https://g-search3.alicdn.com/img/bao/uploaded/i4/i1/2616970884/O1CN01ql896M1IOufC7L3ue_!!0-item_pic.jpg_230x230.jpg_.webp"
+                        alt="Pulpit rock" width="220" height="220">
+                </a>
+                <div style="margin: 2px 0 2px 0">
+                    <span>¥</span>
+                    <strong>6188.00</strong>
+                    <p style="float: right; color: #888; font-size: 10px">7500+人付款</p>
+                </div>
+                <a href="#">【下单立减600元】Apple/苹果 MacBook Air 13.3英寸128G 笔记本手</a><br>
+                <a style="text-decoration: underline; font-size: 11px;" href="#">苏宁易购官方旗舰店</a>
+                <p style="float: right; color: #888; font-size: 10px">江苏 南京</p>
+            </div>
+            <div class="goods">
+                <a href="#">
+                    <img border="0"
+                        src="https://g-search2.alicdn.com/img/bao/uploaded/i4/i3/2616970884/O1CN01s9ORe31IOufCh8HS6_!!0-item_pic.jpg_230x230.jpg_.webp"
+                        alt="Pulpit rock" width="220" height="220">
+                </a>
+                <div style="margin: 2px 0 2px 0">
+                    <span>¥</span>
+                    <strong>6188.00</strong>
+                    <p style="float: right; color: #888; font-size: 10px">7500+人付款</p>
+                </div>
+                <a href="#">【下单立减600元】Apple/苹果 MacBook Air 13.3英寸128G 笔记本手</a><br>
+                <a style="text-decoration: underline; font-size: 11px;" href="#">苏宁易购官方旗舰店</a>
+                <p style="float: right; color: #888; font-size: 10px">江苏 南京</p>
+            </div>
+            <div class="goods">
+                <a href="#">
+                    <img border="0"
+                        src="https://g-search2.alicdn.com/img/bao/uploaded/i4/i2/1669409267/O1CN01yzFa3P2IKKskRU30d_!!0-item_pic.jpg_230x230.jpg_.webp"
+                        alt="Pulpit rock" width="220" height="220">
+                </a>
+                <div style="margin: 2px 0 2px 0">
+                    <span>¥</span>
+                    <strong>6188.00</strong>
+                    <p style="float: right; color: #888; font-size: 10px">7500+人付款</p>
+                </div>
+                <a href="#">【下单立减600元】Apple/苹果 MacBook Air 13.3英寸128G 笔记本手</a><br>
+                <a style="text-decoration: underline; font-size: 11px;" href="#">苏宁易购官方旗舰店</a>
+                <p style="float: right; color: #888; font-size: 10px">江苏 南京</p>
+            </div>
+            <div class="goods">
+                <a href="#">
+                    <img border="0"
+                        src="https://g-search2.alicdn.com/img/bao/uploaded/i4/i2/2200724907121/O1CN01BFYyuR22TSvMvvyIn_!!0-item_pic.jpg_230x230.jpg_.webp"
+                        alt="Pulpit rock" width="220" height="220">
+                </a>
+                <div style="margin: 2px 0 2px 0">
+                    <span>¥</span>
+                    <strong>6188.00</strong>
+                    <p style="float: right; color: #888; font-size: 10px">7500+人付款</p>
+                </div>
+                <a href="#">【下单立减600元】Apple/苹果 MacBook Air 13.3英寸128G 笔记本手</a><br>
+                <a style="text-decoration: underline; font-size: 11px;" href="#">苏宁易购官方旗舰店</a>
+                <p style="float: right; color: #888; font-size: 10px">江苏 南京</p>
+            </div>
+            <div class="goods">
+                <a href="#">
+                    <img border="0"
+                        src="https://g-search3.alicdn.com/img/bao/uploaded/i4/i1/1917047079/O1CN01JrPdXI22AEHQkhN1Y_!!0-item_pic.jpg_230x230.jpg_.webp"
+                        alt="Pulpit rock" width="220" height="220">
+                </a>
+                <div style="margin: 2px 0 2px 0">
+                    <span>¥</span>
+                    <strong>6188.00</strong>
+                    <p style="float: right; color: #888; font-size: 10px">7500+人付款</p>
+                </div>
+                <a href="#">【下单立减600元】Apple/苹果 MacBook Air 13.3英寸128G 笔记本手</a><br>
+                <a style="text-decoration: underline; font-size: 11px;" href="#">苏宁易购官方旗舰店</a>
+                <p style="float: right; color: #888; font-size: 10px">江苏 南京</p>
+            </div>
+            <div class="goods">
+                <a href="#">
+                    <img border="0"
+                        src="https://g-search3.alicdn.com/img/bao/uploaded/i4/i1/1917047079/O1CN01JrPdXI22AEHQkhN1Y_!!0-item_pic.jpg_230x230.jpg_.webp"
+                        alt="Pulpit rock" width="220" height="220">
+                </a>
+                <div style="margin: 2px 0 2px 0">
+                    <span>¥</span>
+                    <strong>6188.00</strong>
+                    <p style="float: right; color: #888; font-size: 10px">7500+人付款</p>
+                </div>
+                <a href="#">【下单立减600元】Apple/苹果 MacBook Air 13.3英寸128G 笔记本手</a><br>
+                <a style="text-decoration: underline; font-size: 11px;" href="#">苏宁易购官方旗舰店</a>
+                <p style="float: right; color: #888; font-size: 10px">江苏 南京</p>
+            </div>
+            <div class="goods">
+                <a href="#">
+                    <img border="0"
+                        src="https://g-search3.alicdn.com/img/bao/uploaded/i4/i1/1917047079/O1CN01JrPdXI22AEHQkhN1Y_!!0-item_pic.jpg_230x230.jpg_.webp"
+                        alt="Pulpit rock" width="220" height="220">
+                </a>
+                <div style="margin: 2px 0 2px 0">
+                    <span>¥</span>
+                    <strong>6188.00</strong>
+                    <p style="float: right; color: #888; font-size: 10px">7500+人付款</p>
+                </div>
+                <a href="#">【下单立减600元】Apple/苹果 MacBook Air 13.3英寸128G 笔记本手</a><br>
+                <a style="text-decoration: underline; font-size: 11px;" href="#">苏宁易购官方旗舰店</a>
+                <p style="float: right; color: #888; font-size: 10px">江苏 南京</p>
+            </div>
+            <div class="goods">
+                <a href="#">
+                    <img border="0"
+                        src="https://g-search3.alicdn.com/img/bao/uploaded/i4/i1/1917047079/O1CN01JrPdXI22AEHQkhN1Y_!!0-item_pic.jpg_230x230.jpg_.webp"
+                        alt="Pulpit rock" width="220" height="220">
+                </a>
+                <div style="margin: 2px 0 2px 0">
+                    <span>¥</span>
+                    <strong>6188.00</strong>
+                    <p style="float: right; color: #888; font-size: 10px">7500+人付款</p>
+                </div>
+                <a href="#">【下单立减600元】Apple/苹果 MacBook Air 13.3英寸128G 笔记本手</a><br>
+                <a style="text-decoration: underline; font-size: 11px;" href="#">苏宁易购官方旗舰店</a>
+                <p style="float: right; color: #888; font-size: 10px">江苏 南京</p>
+            </div>
+            <div class="goods">
+                <a href="#">
+                    <img border="0"
+                        src="https://g-search3.alicdn.com/img/bao/uploaded/i4/i1/1917047079/O1CN01JrPdXI22AEHQkhN1Y_!!0-item_pic.jpg_230x230.jpg_.webp"
+                        alt="Pulpit rock" width="220" height="220">
+                </a>
+                <div style="margin: 2px 0 2px 0">
+                    <span>¥</span>
+                    <strong>6188.00</strong>
+                    <p style="float: right; color: #888; font-size: 10px">7500+人付款</p>
+                </div>
+                <a href="#">【下单立减600元】Apple/苹果 MacBook Air 13.3英寸128G 笔记本手</a><br>
+                <a style="text-decoration: underline; font-size: 11px;" href="#">苏宁易购官方旗舰店</a>
+                <p style="float: right; color: #888; font-size: 10px">江苏 南京</p>
+            </div>
+            <div class="goods">
+                <a href="#">
+                    <img border="0"
+                        src="https://g-search3.alicdn.com/img/bao/uploaded/i4/i1/1917047079/O1CN01JrPdXI22AEHQkhN1Y_!!0-item_pic.jpg_230x230.jpg_.webp"
+                        alt="Pulpit rock" width="220" height="220">
+                </a>
+                <div style="margin: 2px 0 2px 0">
+                    <span>¥</span>
+                    <strong>6188.00</strong>
+                    <p style="float: right; color: #888; font-size: 10px">7500+人付款</p>
+                </div>
+                <a href="#">【下单立减600元】Apple/苹果 MacBook Air 13.3英寸128G 笔记本手</a><br>
+                <a style="text-decoration: underline; font-size: 11px;" href="#">苏宁易购官方旗舰店</a>
+                <p style="float: right; color: #888; font-size: 10px">江苏 南京</p>
+            </div>
+        </div>
+        <!-- 页码 -->
+        <div class="page">
+            <ul class="pagination">
+                <li><a href="#">«上一页</a></li>
+                <li><a class="active" href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">6</a></li>
+                <li><a href="#">7</a></li>
+                <li><a href="#">下一页»</a></li>
+            </ul>
+        </div>
+        <!-- 下侧广告栏 -->
+        <div class="ad-bottom">
+            <!-- 广告导航栏 -->
+            <ul class="ad">
+                <li><a class="bar ad-active" style="color: #f40" href="#">掌柜热卖</a></li>
+                <li><a class="bar" href="#">笔记本电脑</a></li>
+                <li><a class="bar" href="#">苹果笔记本</a></li>
+                <li><a class="bar" href="#">MacBook笔记本电脑</a></li>
+                <li><a class="bar" href="#">MacBook512</a></li>
+                <li style="float: right;font-size: 10px"><a class="bar" href="#">广告&我也要出现在这里</a></li>
+            </ul>
+            <div class="goods-list">
+                <div class="goods-ad">
+                    <a href="#">
+                        <img border="0"
+                            src="https://img.alicdn.com/imgextra/i4/13187539/O1CN018FRo8J25YuTsBgCRt_!!2-saturn_solar.png_220x220.jpg_.webp"
+                            alt="Pulpit rock" width="220" height="220">
+                    </a>
+                    <div style="margin: 2px 0 2px 0">
+                        <span>¥</span>
+                        <strong>6188.00</strong>
+                        <p style="float: right; color: #888; font-size: 10px">7500+人付款</p>
+                    </div>
+                    <a href="#">【下单立减600元】Apple/苹果 MacBook Air 13.3英寸128G 笔记本手</a><br>
+                    <a style="text-decoration: underline; font-size: 11px;" href="#">苏宁易购官方旗舰店</a>
+                    <p style="float: right; color: #888; font-size: 10px">江苏 南京</p>
+                </div>
+                <div class="goods-ad">
+                    <a href="#">
+                        <img border="0"
+                            src="https://img.alicdn.com/imgextra/i4/116664259/O1CN011hKfJFauqYbeT3p_!!0-saturn_solar.jpg_220x220.jpg_.webp"
+                            alt="Pulpit rock" width="220" height="220">
+                    </a>
+                    <div style="margin: 2px 0 2px 0">
+                        <span>¥</span>
+                        <strong>6188.00</strong>
+                        <p style="float: right; color: #888; font-size: 10px">7500+人付款</p>
+                    </div>
+                    <a href="#">【下单立减600元】Apple/苹果 MacBook Air 13.3英寸128G 笔记本手</a><br>
+                    <a style="text-decoration: underline; font-size: 11px;" href="#">苏宁易购官方旗舰店</a>
+                    <p style="float: right; color: #888; font-size: 10px">江苏 南京</p>
+                </div>
+                <div class="goods-ad">
+                    <a href="#">
+                        <img border="0"
+                            src="https://img.alicdn.com/imgextra/i2/116448460/O1CN01fdL88h2CMjG1K3BqN_!!0-saturn_solar.jpg_220x220.jpg_.webp"
+                            alt="Pulpit rock" width="220" height="220">
+                    </a>
+                    <div style="margin: 2px 0 2px 0">
+                        <span>¥</span>
+                        <strong>6188.00</strong>
+                        <p style="float: right; color: #888; font-size: 10px">7500+人付款</p>
+                    </div>
+                    <a href="#">【下单立减600元】Apple/苹果 MacBook Air 13.3英寸128G 笔记本手</a><br>
+                    <a style="text-decoration: underline; font-size: 11px;" href="#">苏宁易购官方旗舰店</a>
+                    <p style="float: right; color: #888; font-size: 10px">江苏 南京</p>
+                </div>
+                <div class="goods-ad">
+                    <a href="#">
+                        <img border="0"
+                            src="https://img.alicdn.com/imgextra/i1/341580189/O1CN01kZJReg1DGbOYlCDDw_!!0-saturn_solar.jpg_220x220.jpg_.webp"
+                            alt="Pulpit rock" width="220" height="220">
+                    </a>
+                    <div style="margin: 2px 0 2px 0">
+                        <span>¥</span>
+                        <strong>6188.00</strong>
+                        <p style="float: right; color: #888; font-size: 10px">7500+人付款</p>
+                    </div>
+                    <a href="#">【下单立减600元】Apple/苹果 MacBook Air 13.3英寸128G 笔记本手</a><br>
+                    <a style="text-decoration: underline; font-size: 11px;" href="#">苏宁易购官方旗舰店</a>
+                    <p style="float: right; color: #888; font-size: 10px">江苏 南京</p>
+                </div>
+                <div class="goods-ad">
+                    <a href="#">
+                        <img border="0"
+                            src="https://img.alicdn.com/imgextra/i3/117065719/TB2sQFnAeySBuNjy1zdXXXPxFXa_!!0-saturn_solar.jpg_220x220.jpg_.webp"
+                            alt="Pulpit rock" width="220" height="220">
+                    </a>
+                    <div style="margin: 2px 0 2px 0">
+                        <span>¥</span>
+                        <strong>6188.00</strong>
+                        <p style="float: right; color: #888; font-size: 10px">7500+人付款</p>
+                    </div>
+                    <a href="#">【下单立减600元】Apple/苹果 MacBook Air 13.3英寸128G 笔记本手</a><br>
+                    <a style="text-decoration: underline; font-size: 11px;" href="#">苏宁易购官方旗舰店</a>
+                    <p style="float: right; color: #888; font-size: 10px">江苏 南京</p>
+                </div>
+            </div>
+        </div>
+        <!-- 下侧搜索框 -->
+        <div class="search-wrap margin">
+            <div class="choose-wrap">
+                <div class="choose">
+                    <ul>
+                        <!-- <li>宝贝</li>
+                        <li>店铺</li> -->
+                    </ul>
+                </div>
+            </div>
+            <div class="input">
+                <input type="text">
+            </div>
+            <button class="submit">搜索</button>
+        </div>
+    </div>
+    <!-- 页脚 -->
+    <div class="width">
+        <footer>
+            <a href="#">阿里巴巴集团</a>|
+            <a href="#">阿里巴巴集团</a>|
+            <a href="#">阿里巴巴集团</a>|
+            <a href="#">阿里巴巴集团</a>|
+            <a href="#">阿里巴巴集团</a>|
+            <a href="#">阿里巴巴集团</a>|
+            <a href="#">阿里巴巴集团</a>|
+            <a href="#">阿里巴巴集团</a>|
+            <a href="#">阿里巴巴集团</a>
+            <br>
+            <a href="#">虾米</a>|
+            <a href="#">阿里星球</a>|
+            <a href="#">钉钉</a>|
+            <a href="#">支付宝</a>
+        </footer>
+        <p style="text-align: center">© 2003-2018 Taobao.com 版权所有</p>
+    </div>
+</body>
+
+</html>

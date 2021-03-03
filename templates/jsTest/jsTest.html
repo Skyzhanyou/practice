@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="{{ url_for('static', filename='js/week3/frontError.js') }}"></script>
+    <script src="https://cdn.bootcss.com/html2canvas/0.5.0-beta4/html2canvas.js"></script>
+    <meta charset="UTF-8">
+    <title>js测试</title>
+    <style>
+    canvas {
+        height: 540px;
+        width: 960px;
+    }
+    </style>
+</head>
+
+<body>
+    <dl id="drink-menu" style="border:solid 1px #ccc;padding:6px;">
+        <dt>摩卡</dt>
+        <dd>热摩卡咖啡</dd>
+        <dt>酸奶</dt>
+        <dd>北京老酸奶</dd>
+        <dt>果汁</dt>
+        <dd>鲜榨苹果汁</dd>
+    </dl>
+
+    <div id="test-div">
+        <p id="test-js">javascript</p>
+        <p>Java</p>
+    </div>
+
+    <form id="test-register" action="#" target="_blank" onsubmit="return checkRegisterForm()">
+        <p id="test-error" style="color:red"></p>
+        <p>
+            用户名: <input type="text" id="username" name="username">
+        </p>
+        <p>
+            口令: <input type="password" id="password" name="password">
+        </p>
+        <p>
+            重复口令: <input type="password" id="password-2">
+        </p>
+        <p>
+            <button type="submit">提交</button> <button type="reset">重置</button>
+        </p>
+    </form>
+
+    <input type="text" id="test-response-text">
+    <button type="submit" onclick="ajax()">ajax请求</button><br>
+
+    <input type="text" id="test-promise-ajax-result">
+    <button type="submit" onclick="proAjax()">通过Promise对象进行ajax请求</button>
+
+    <table id="js-log" border=1>
+        <tr>
+            <th>error</th>
+            <th>url</th>
+            <th>line</th>
+            <th>col</th>
+            <th>info</th>
+        </tr>
+    </table>
+
+    <img src="error.png" alt="error" onerror="staticError()">
+
+    <table id="static-log" border=1>
+        <tr>
+            <th>type</th>
+            <th>screen</th>
+        </tr>
+    </table>
+
+</body>
+<script src="{{ url_for('static', filename='js/week3/jsTest.js') }}"></script>
+
+</html>

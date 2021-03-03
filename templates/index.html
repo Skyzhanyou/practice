@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>主页导航</title>
+</head>
+
+<body>
+  <nav class="nav-link">
+    <a href="{{ url_for('test.tmallInfo') }}">天猫商品详情页</a> |
+    <a href="{{ url_for('test.tmallIndex') }}">天猫首页</a> |
+    <a href="{{ url_for('test.tmall') }}">天猫商品列表页</a> |
+    <a href="{{ url_for('test.taobao') }}">淘宝商品列表页</a> |
+    <a href="{{ url_for('test.page1') }}">页面1</a> |
+    <a href="{{ url_for('test.page2') }}">页面2</a> |
+    <a href="{{ url_for('test.jqTest') }}">jQuery练习</a> |
+    <a href="{{ url_for('test.jsTest') }}">js练习</a> |
+    <a href="{{ url_for('test.dashboard') }}">数据仪表盘</a> |
+    <a href="{{ url_for('test.amaze') }}">妹子ui</a> |
+    <a href="{{ url_for('test.todo') }}">todo</a>
+  </nav>
+</body>
+
+<style>
+  html {
+    height: 100%;
+  }
+
+  body {
+    height: 100%;
+    display: flex;
+  }
+
+  .nav-link {
+    margin: auto;
+  }
+</style>
+
+</html>

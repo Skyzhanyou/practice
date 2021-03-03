@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>todo</title>
+
+    <!-- jQuery -->
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css"
+        integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
+    </script>
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/week4/todo.css') }}">
+</head>
+
+<body>
+    <!-- 头部 -->
+    <header>
+        <div class="body-width">
+            <h2>awesome-flask-todo</h2>
+            <div class="user">
+                <span>active user:</span>
+                <strong>{{ user_name }}</strong>
+                <a href="/tlogout/">
+                    <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>
+                    logout
+                </a>
+            </div>
+        </div>
+    </header>
+    <div class="body-width">
+
+        <!-- todo list添加 -->
+        {% if warn == '时间冲突' %}
+        <div class="alert alert-danger" role="alert">
+            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+            <span class="sr-only">Error:</span>
+            {{ warn }}
+        </div>
+        {% endif %}
+        <div class="add-todo">
+            <form action="/todo/" method="POST">
+                {{ form.csrf_token }}
+                <p>
+                    {{ form.content.label }}
+                    {{ form.content(size=40) }}
+                </p>
+                <p>
+                    {{ form.time.label }}
+                    <input class="time" type="datetime-local" name="time">
+                    {{ form.submit(class="wtf-btn btn btn-primary", size=5) }}
+                </p>
+            </form>
+        </div>
+
+        <!-- todo list查询 -->
+        {% if warn == '无结果' %}
+        <div class="alert alert-danger" role="alert">
+            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+            <span class="sr-only">Error:</span>
+            {{ warn }}
+        </div>
+        {% endif %}
+        <div class="search-todo">
+            <form action="/todo/" method="POST">
+                {{ sform.csrf_token }}
+                {#                <strong>time:</strong>#}
+                {#                <input class="time" type="datetime-local" name="stime">#}
+                {{ sform.content(size=40) }}
+                {{ sform.submit(class="wtf-btn btn btn-primary", size=5) }}
+            </form>
+        </div>
+
+        <!-- todo list编辑 -->
+        {% if warn == '时间错误' %}
+        <div class="alert alert-danger" role="alert">
+            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+            <span class="sr-only">Error:</span>
+            {{ warn }}
+        </div>
+        {% endif %}
+        <!-- <div class="eidt-todo">
+            <form action="/todo/" method="POST">
+                {{ eform.csrf_token }}
+                <p>
+                    <strong>time:</strong>
+                    <input class="time" type="datetime-local" name="etime">
+                </p>
+                <p>
+                    {{ eform.content.label }}
+                    {{ eform.content(size=40) }}
+                </p>
+                <p>
+                    <strong>change time:</strong>
+                    <input class="ctime" type="datetime-local" name="ctime">
+                    {{ eform.esubmit(class="wtf-btn btn btn-primary", size=5) }}
+                </p>
+            </form>
+        </div> -->
+
+        <!-- todo list -->
+        <div class="todo-list">
+            <div class="todo-list-head">
+                <h1>Todo List</h1>
+                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                <!-- <span class="glyphicon glyphicon-edit" aria-hidden="true"></span> -->
+                <a href="/todo/">
+                    <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+                </a>
+            </div>
+
+            <table id="todo_list">
+                <tr>
+                    <th class="content">content</th>
+                    <th class="time">time</th>
+                    <th class="change-btn">operation</th>
+                </tr>
+                {% for item in todo_list %}
+                {% if item.done == 0 %}
+                <tr id="{{ item.id }}">
+                    {% else %}
+                <tr id="{{ item.id }}" class="done">
+                    {% endif %}
+                    <td class="content"> {{ item.content }} </td>
+                    <td class="time"> {{ item.time }} </td>
+                    <td class="change-btn">
+                        {% if item.done == 0 %}
+                        <button type="button" class="btn btn-primary" value="{{ item.time }}">Undone</button>
+                        {% else %}
+                        <button type="button" class="btn btn-primary" value="{{ item.time }}">Done</button>
+                        {% endif %}
+                        <button type="submit" class="btn btn-danger" value="{{ item.time }}">Delete</button>
+                        <button type="submit" class="edit btn btn-info" value="{{ item.time }}">
+                            <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                            Edit
+                        </button>
+                    </td>
+                </tr>
+
+
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+
+</body>
+<script src="{{ url_for('static', filename='js/week4/todo.js') }}"></script>
+
+</html>

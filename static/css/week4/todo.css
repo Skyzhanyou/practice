@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* html, body {
+    height: 100%;
+} */
+
+a:hover {
+    text-decoration: none;
+}
+
+.sign-login-width {
+    width: 30em;
+    margin: 20px auto;
+    text-align: center;
+    background-color: #265a88;
+    color: white;
+    padding: 2em;
+    border-radius: 10px;
+}
+
+.sign-login-width .in {
+    color: black;
+}
+
+.sign-login-width h1 {
+    margin-bottom: 1em;
+}
+
+.sign-login-pwd {
+    margin-left: 15px;
+}
+
+.sign-login-width a:visited{
+    color: #65b7ff;
+}
+
+.body-width {
+    width: 60em;
+    margin: 0 auto;
+}
+
+.body-width h4 {
+    color: red;
+}
+
+header {
+    border-bottom: 2px solid #dddddd;
+    overflow: hidden;
+}
+
+header a:hover {
+    background-color: #265a88;
+    color: white;
+}
+
+header h2 {
+    text-align: center;
+}
+
+header .user {
+    float: right;
+}
+
+header .user a {
+    border: 2px solid #dddddd;
+    border-radius: 4px;
+    padding: 2px;
+}
+
+.add-todo {
+    display: none;
+    width: 55%;
+    margin: 10px auto;
+}
+
+.add-todo .time {
+    width: 290px;
+    margin-left: 22px;
+}
+
+.search-todo {
+    display: none;
+    width: 55%;
+    margin: 10px auto;
+}
+
+.search-todo .time {
+    width: 290px;
+    margin-left: 30px;
+}
+
+.eidt-todo {
+    display: none;
+    width: 60%;
+    margin: 10px auto;
+}
+
+.eidt-todo .time {
+    width: 290px;
+    margin-left: 85px;
+}
+
+.eidt-todo .ctime {
+    width: 290px;
+    margin-left: 32px;
+}
+
+.wtf-btn {
+    margin-left: 10px;
+}
+
+.todo-list {
+    margin: 2em 0;
+}
+
+.todo-list-head {
+    overflow: hidden;
+}
+
+.todo-list-head h1 {
+    display: block;
+    float: left;
+}
+
+.todo-list-head span {
+    display: block;
+    float: right;
+    margin-top: 50px;
+    margin-right: 10px;
+}
+
+.todo-list-head span:hover {
+    transform: rotate(360deg);
+    transition: transform 0.5s linear;
+    cursor: pointer;
+}
+
+#todo_list {
+    font-size: 16px;
+    background-color: #f2dede;
+}
+
+#todo_list tr {
+    display: block;
+    border-bottom: 1px solid #dddddd;
+    padding: 8px 1em;
+}
+
+#todo_list .done {
+    background-color: #d9edf7;
+}
+
+#todo_list tr:first-child {
+    background-color: white;
+    border-bottom: 2px solid #dddddd;
+}
+
+#todo_list tr .content {
+    width: 18em;
+}
+
+#todo_list tr .time {
+    width: 18em;
+}
+
+#todo_list tr .change-btn {
+    width: 14em;
+}
+
+#todo_list tr .change-btn .edit {
+    float: right;
+}

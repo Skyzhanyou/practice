@@ -1,0 +1,309 @@
+/* body,button,dd,dl,dt,fieldset,form,h1,h2,h3,h4,h5,h6,hr,input,legend,li,ol,p,pre,td,textarea,th,ul {
+    margin: 0;
+    padding: 0;
+} */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    width: auto;
+    height: 26px;
+    position: relative !important;
+    background: #f2f2f2;
+    z-index: 99999;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+a {
+    margin-right: 20px;
+}
+
+a:link {
+    color: #6c6c6c;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #6c6c6c;
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(255, 0, 4);
+}
+
+.width {
+    width: 1174px !important;
+    margin: auto;
+    position: relative;
+
+}
+
+.p-header {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.dropbtn {
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+/* 容器 <div> - 需要定位下拉内容 */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* 下拉内容 (默认隐藏) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+/* 下拉菜单的链接 */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* 鼠标移上去后修改下拉菜单链接颜色 */
+.dropdown-content a:hover {
+    background-color: #f1f1f1
+}
+
+/* 在鼠标移上去后显示下拉菜单 */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* 当下拉内容显示后修改下拉按钮的背景颜色 */
+.dropdown:hover .dropbtn {
+    background-color: #ffffff;
+}
+
+.top-wrap {
+    margin-top: 24px;
+}
+
+.search-wrap {
+    margin: auto;
+    border: solid 2px #f50;
+    border-right: none;
+    height: 31px;
+    width: 681px;
+}
+
+.input {
+    float: left;
+    width: 532px;
+    height: 31px;
+    vertical-align: middle;
+    position: relative;
+    font-size: 12px;
+}
+
+input {
+    width: 528px;
+    height: 27px;
+}
+
+.submit {
+    float: left;
+    background-color: #f50;
+    float: left;
+    width: 80px;
+    height: 31px;
+    border: none;
+    cursor: pointer;
+}
+
+.choose-wrap {
+    position: relative;
+    float: left;
+    width: 69px;
+    height: 31px;
+}
+
+.choose {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 67px;
+    overflow: hidden;
+    height: 31px;
+    line-height: 31px;
+    border-right: solid 1px #e5e5e5;
+    border-left: solid 1px #f5f5f5;
+}
+
+.main {
+    margin-top: 24px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(255, 255, 255);
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    text-align: center;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #f40;
+    color: #ffffff;
+}
+
+.tap {
+    border-bottom: 2px solid #f40;
+}
+
+.bar {
+    margin-right: 0;
+}
+
+.active {
+    background-color: #f40;
+}
+
+.selector {
+    border: 1px solid #e8e8e8;
+}
+
+.row {
+    position: relative;
+    border-top: 1px dashed #dedede;
+    margin: 0 8px;
+    padding: 10px;
+}
+
+.goods-width {
+    width: 1190px !important;
+    margin: auto;
+    position: relative;
+}
+
+.goods-list {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    width: 100%;
+
+}
+
+.goods {
+    border: 1px solid #e8e8e8;
+    width: 220px;
+    height: 360px;
+    margin: 22px 8px 0 8px;
+}
+
+span {
+    margin-left: 10px;
+    color: #F40;
+}
+
+strong {
+    color: #F40;
+}
+
+ul.pagination {
+    display: inline-block;
+    padding: 0;
+    margin: auto;
+}
+
+ul.pagination li {
+    display: inline;
+}
+
+ul.pagination li a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+    border: 1px solid #ddd;
+}
+
+ul.pagination li a.active {
+    background-color: #F40;
+    color: white;
+    border: 1px solid #F40;
+}
+
+.page {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.ad-bottom {
+    margin-top: 40px;
+    border: 1px solid #e8e8e8;
+}
+
+ul.ad {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #f5f5f5;
+}
+
+ul.ad li {
+    float: left;
+}
+
+ul.ad li a {
+    display: block;
+    text-align: center;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+ul.ad li a:hover:not(.ad-active) {
+    background-color: #f5f5f5;
+    color: #f40;
+}
+
+.ad-active {
+    border-bottom: 2px solid #f40;
+}
+
+.goods-ad {
+    border: 1px solid #e8e8e8;
+    width: 220px;
+    height: 360px;
+    margin: 22px 7px 0 7px;
+}
+
+.margin {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+footer {
+    border-top: 1px solid #dedede;
+    border-bottom: 1px solid #dedede;
+    margin-bottom: 40px; 
+}

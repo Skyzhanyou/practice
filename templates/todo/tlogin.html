@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>用户登录</title>
+
+    <!-- jQuery -->
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css"
+        integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
+    </script>
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/week4/todo.css') }}">
+</head>
+
+<body>
+    <!-- 头部 -->
+    <header>
+        <div class="body-width">
+            <h2>awesome-flask-todo</h2>
+        </div>
+    </header>
+    <div class="sign-login-width">
+        {% block content %}
+        <h1>用户登录</h1>
+        <h4>{{ warn }}</h4>
+        <form action="/tlogin/" method="POST" name="login">
+            {{ form.csrf_token }}
+            <p>
+                {{ form.name.label }}
+                {{ form.name(size=40, class="in") }}
+            </p>
+            <p>
+                {{ form.pwd.label }}
+                {{ form.pwd(size=40, class="in sign-login-pwd") }}
+            </p>
+            <p>
+                {{ form.submit(class="btn btn-success") }}
+                没有账号？
+                <a href="/tsignin/">注册</a>
+            </p>
+        </form>
+        {% endblock %}
+    </div>
+</body>
+
+</html>
